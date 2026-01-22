@@ -46,7 +46,7 @@ export default function Home() {
 
   return (
     <div className="relative isolate overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(128,0,32,0.16),_transparent_35%),radial-gradient(circle_at_30%_10%,_rgba(204,41,82,0.12),_transparent_25%),radial-gradient(circle_at_70%_20%,_rgba(236,72,153,0.08),_transparent_25%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(217,119,6,0.16),_transparent_35%),radial-gradient(circle_at_30%_10%,_rgba(245,158,11,0.12),_transparent_25%),radial-gradient(circle_at_70%_20%,_rgba(253,186,116,0.08),_transparent_25%)]" />
       <main className="relative mx-auto flex min-h-screen max-w-6xl flex-col gap-10 px-6 py-16 sm:py-20 lg:py-24">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-3xl space-y-6">
