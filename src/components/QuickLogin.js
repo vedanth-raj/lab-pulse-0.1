@@ -35,7 +35,7 @@ const QuickLogin = () => {
           
           <button
             onClick={handleStudentLogin}
-            className="w-full bg-green-600 text-white py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center"
+            className="w-full bg-amber-600 text-white py-4 rounded-lg font-semibold hover:bg-amber-700 transition-colors flex items-center justify-center"
           >
             <User className="w-5 h-5 mr-2" />
             Enter as Student

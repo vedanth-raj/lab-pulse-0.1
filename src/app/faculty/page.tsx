@@ -327,7 +327,7 @@ function FacultyDashboard() {
           <div className="flex gap-3">
             <button
               onClick={() => setShowCreateSession(true)}
-              className="flex items-center gap-2 rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/20 transition hover:-translate-y-0.5"
+              className="flex items-center gap-2 rounded-lg bg-amber-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5"
             >
               <Plus className="h-4 w-4" />
               Create Session
@@ -354,8 +354,8 @@ function FacultyDashboard() {
                 onClick={() => setSelectedSession(session)}
                 className={`cursor-pointer rounded-xl border p-4 transition hover:-translate-y-1 ${
                   selectedSession?.id === session.id
-                    ? "border-emerald-500 bg-emerald-500/10"
-                    : "border-white/20 bg-white/5 hover:border-emerald-500/50"
+                    ? "border-amber-500 bg-amber-500/10"
+                    : "border-white/20 bg-white/5 hover:border-amber-500/50"
                 }`}
               >
                 <div className="flex items-start justify-between">
@@ -376,7 +376,7 @@ function FacultyDashboard() {
                       </div>
                     </div>
                   </div>
-                  <div className={`h-3 w-3 rounded-full ${session.isActive ? "bg-emerald-400" : "bg-slate-400"}`} />
+                  <div className={`h-3 w-3 rounded-full ${session.isActive ? "bg-amber-400" : "bg-slate-400"}`} />
                 </div>
               </div>
             ))}
@@ -396,12 +396,12 @@ function FacultyDashboard() {
                 </span>
                 <span
                   className={`flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 ${
-                    livePulse ? "border-emerald-500/50" : ""
+                    livePulse ? "border-amber-500/50" : ""
                   }`}
                 >
                   <span
                     className={`h-2.5 w-2.5 rounded-full transition ${
-                      livePulse ? "bg-emerald-400 shadow-[0_0_0_6px_rgba(16,185,129,0.18)]" : "bg-slate-500"
+                      livePulse ? "bg-amber-400 shadow-[0_0_0_6px_rgba(245,158,11,0.18)]" : "bg-slate-500"
                     }`}
                   />
                   Live
@@ -469,7 +469,7 @@ function FacultyDashboard() {
                                   {meta.label}
                                 </div>
                                 {score !== undefined && score !== null && (
-                                  <div className="text-xs font-semibold text-emerald-400">
+                                  <div className="text-xs font-semibold text-amber-400">
                                     {score}/{task.maxScore || 100}
                                   </div>
                                 )}
@@ -581,7 +581,7 @@ function FacultyDashboard() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950"
+                  className="w-full rounded-lg bg-amber-500 px-4 py-2 text-sm font-semibold text-slate-950"
                 >
                   Create Session
                 </button>
@@ -635,7 +635,7 @@ function FacultyDashboard() {
                       type="checkbox"
                       checked={taskForm.allowFileUpload}
                       onChange={(e) => setTaskForm({ ...taskForm, allowFileUpload: e.target.checked })}
-                      className="rounded border-white/20 bg-white/5 text-emerald-500 focus:ring-emerald-500/20"
+                      className="rounded border-white/20 bg-white/5 text-amber-500 focus:ring-amber-500/20"
                     />
                     Allow Document/PDF Upload
                   </label>
@@ -669,7 +669,7 @@ function FacultyDashboard() {
                       <button
                         type="button"
                         onClick={addTestCase}
-                        className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-1 rounded hover:bg-emerald-500/30"
+                        className="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded hover:bg-amber-500/30"
                       >
                         Add Test Case
                       </button>
@@ -718,7 +718,7 @@ function FacultyDashboard() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950"
+                  className="w-full rounded-lg bg-amber-500 px-4 py-2 text-sm font-semibold text-slate-950"
                 >
                   Create Task
                 </button>

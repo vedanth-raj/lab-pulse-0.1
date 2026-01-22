@@ -476,7 +476,7 @@ function StudentDashboard() {
           {/* Timer */}
           {selectedSession && timerActive && (
             <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-6 py-4">
-              <Clock className="h-5 w-5 text-emerald-400" />
+              <Clock className="h-5 w-5 text-amber-400" />
               <div className="text-center">
                 <div className="text-2xl font-mono font-bold text-white">
                   {formatTime(timer)}
@@ -500,7 +500,7 @@ function StudentDashboard() {
         {!student ? (
           <form
             onSubmit={handleJoinSession}
-            className="mb-10 grid gap-3 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-emerald-500/10 sm:grid-cols-[1fr_auto]"
+            className="mb-10 grid gap-3 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-amber-500/10 sm:grid-cols-[1fr_auto]"
           >
             <div className="space-y-2">
               <label className="text-sm text-slate-200/80">Session Name</label>
@@ -508,21 +508,21 @@ function StudentDashboard() {
                 value={sessionName}
                 onChange={(e) => setSessionName(e.target.value)}
                 placeholder="e.g., Data Structures Lab"
-                className="w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-white outline-none ring-emerald-400/40 focus:ring-2"
+                className="w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-white outline-none ring-amber-400/40 focus:ring-2"
                 required
               />
             </div>
             <button
               type="submit"
               disabled={joining}
-              className="flex items-center justify-center gap-2 rounded-2xl bg-emerald-500 px-6 py-3 font-semibold text-slate-950 shadow-lg shadow-emerald-500/20 transition hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed sm:col-span-1"
+              className="flex items-center justify-center gap-2 rounded-2xl bg-amber-500 px-6 py-3 font-semibold text-slate-950 shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed sm:col-span-1"
             >
               <UserPlus className="h-4 w-4" />
               {joining ? "Joining..." : "Join Session"}
             </button>
           </form>
         ) : selectedSession ? (
-          <div className="mb-8 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-4">
+          <div className="mb-8 rounded-xl border border-amber-500/30 bg-amber-500/10 p-4">
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-lg font-semibold text-white">{selectedSession.name}</h3>
@@ -592,8 +592,8 @@ function StudentDashboard() {
                             disabled={isSaving}
                             className={`rounded-full border px-4 py-2 text-sm font-medium transition disabled:opacity-50 ${
                               status === nextStatus
-                                ? "border-emerald-500 bg-emerald-500/20 text-emerald-200"
-                                : "border-white/20 bg-white/5 text-slate-300 hover:border-emerald-500/50"
+                                ? "border-amber-500 bg-amber-500/20 text-amber-200"
+                                : "border-white/20 bg-white/5 text-slate-300 hover:border-amber-500/50"
                             }`}
                           >
                             {STATUS_META[nextStatus].label}
@@ -612,7 +612,7 @@ function StudentDashboard() {
                                 Max Score: {task.maxScore || 100}
                               </span>
                               {progress[keyFor(student.id, task.id)]?.score && (
-                                <span className="text-xs font-semibold text-emerald-400">
+                                <span className="text-xs font-semibold text-amber-400">
                                   Score: {progress[keyFor(student.id, task.id)]?.score}
                                 </span>
                               )}
@@ -625,7 +625,7 @@ function StudentDashboard() {
                               handleCodeChange(task.id, e.target.value);
                             }}
                             placeholder={`Write your ${task.language} code here...`}
-                            className="w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 font-mono text-sm text-white outline-none ring-emerald-400/40 focus:ring-2 resize-none"
+                            className="w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 font-mono text-sm text-white outline-none ring-amber-400/40 focus:ring-2 resize-none"
                             rows={8}
                           />
                           {task.testCases && task.testCases.length > 0 && (
@@ -639,7 +639,7 @@ function StudentDashboard() {
                               </button>
                               {testResults[task.id] && (
                                 <div className="flex items-center gap-2 text-xs">
-                                  <span className="text-emerald-400">
+                                  <span className="text-amber-400">
                                     ✓ {testResults[task.id].filter(r => r.passed).length} passed
                                   </span>
                                   <span className="text-red-400">
@@ -654,7 +654,7 @@ function StudentDashboard() {
                               {testResults[task.id].map((result, index) => (
                                 <div
                                   key={result.testCaseId}
-                                  className={`text-xs p-2 rounded ${result.passed ? 'bg-emerald-500/10 text-emerald-300' : 'bg-red-500/10 text-red-300'}`}
+                                  className={`text-xs p-2 rounded ${result.passed ? 'bg-amber-500/10 text-amber-300' : 'bg-red-500/10 text-red-300'}`}
                                 >
                                   <div className="flex items-center justify-between">
                                     <span>Test {index + 1}</span>
@@ -679,7 +679,7 @@ function StudentDashboard() {
                           value={output}
                           onChange={(e) => setDrafts((prev) => ({ ...prev, [task.id]: e.target.value }))}
                           placeholder="Paste your code or output here..."
-                          className="w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 font-mono text-sm text-white outline-none ring-emerald-400/40 focus:ring-2 resize-none"
+                          className="w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 font-mono text-sm text-white outline-none ring-amber-400/40 focus:ring-2 resize-none"
                           rows={6}
                         />
                       </div>
@@ -690,7 +690,7 @@ function StudentDashboard() {
                           {uploadedFiles[task.id] ? (
                             <div className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 p-3">
                               <div className="flex items-center gap-2">
-                                <FileText className="h-4 w-4 text-emerald-400" />
+                                <FileText className="h-4 w-4 text-amber-400" />
                                 <span className="text-sm text-white">{uploadedFiles[task.id].name}</span>
                                 <span className="text-xs text-slate-400">
                                   ({(uploadedFiles[task.id].size / 1024 / 1024).toFixed(2)} MB)
@@ -717,7 +717,7 @@ function StudentDashboard() {
                               />
                               <label
                                 htmlFor={`file-upload-${task.id}`}
-                                className="flex items-center justify-center gap-2 rounded-xl border border-dashed border-white/20 bg-white/5 p-4 cursor-pointer transition hover:border-emerald-500/50 hover:bg-emerald-500/10"
+                                className="flex items-center justify-center gap-2 rounded-xl border border-dashed border-white/20 bg-white/5 p-4 cursor-pointer transition hover:border-amber-500/50 hover:bg-amber-500/10"
                               >
                                 <Upload className="h-4 w-4 text-slate-400" />
                                 <span className="text-sm text-slate-300">Click to upload file</span>
@@ -730,7 +730,7 @@ function StudentDashboard() {
                       <button
                         onClick={() => saveOutput(task.id)}
                         disabled={isSaving}
-                        className="flex items-center gap-2 rounded-xl bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/20 transition hover:-translate-y-0.5 disabled:opacity-50"
+                        className="flex items-center gap-2 rounded-xl bg-amber-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 disabled:opacity-50"
                       >
                         <Send className="h-4 w-4" />
                         {isSaving ? "Saving..." : "Save Output"}

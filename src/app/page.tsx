@@ -98,7 +98,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full max-w-md space-y-5 rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 via-white/5 to-white/5 p-6 shadow-2xl shadow-emerald-500/10 backdrop-blur">
+          <div className="w-full max-w-md space-y-5 rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 via-white/5 to-white/5 p-6 shadow-2xl shadow-amber-500/10 backdrop-blur">
             <div className="space-y-2">
               <p className="text-sm uppercase tracking-[0.2em] text-slate-200/70">
                 Firebase quick start
@@ -111,14 +111,14 @@ export default function Home() {
               </p>
             </div>
             <div className="space-y-3 rounded-2xl border border-white/10 bg-black/40 p-4 font-mono text-xs text-slate-100 shadow-inner shadow-black/40">
-              <p className="text-emerald-200"># .env.local</p>
+              <p className="text-amber-200"># .env.local</p>
               <p>FIREBASE_API_KEY=your-api-key</p>
               <p>FIREBASE_AUTH_DOMAIN=your-auth-domain</p>
               <p>FIREBASE_PROJECT_ID=your-project-id</p>
             </div>
-            <div className="space-y-3 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4 text-sm text-emerald-50 shadow-lg shadow-emerald-500/15">
+            <div className="space-y-3 rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm text-amber-50 shadow-lg shadow-amber-500/15">
               <p className="font-semibold">Ship to Vercel</p>
-              <p className="text-emerald-100/80">
+              <p className="text-amber-100/80">
                 This template is tuned for the App Router, React 19, Tailwind 4,
                 and Firebase realtime. Deploy to Vercel, add env vars, and
                 you&apos;re live.

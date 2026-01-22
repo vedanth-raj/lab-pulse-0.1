@@ -145,7 +145,7 @@ const FacultyDashboard = () => {
           
           <div className="bg-white rounded-lg shadow p-6">
             <div className="flex items-center">
-              <CheckCircle className="w-8 h-8 text-green-600 mr-3" />
+              <CheckCircle className="w-8 h-8 text-amber-600 mr-3" />
               <div>
                 <p className="text-sm font-medium text-gray-600">Completed Tasks</p>
                 <p className="text-2xl font-bold text-gray-900">

@@ -108,7 +108,7 @@ const StudentInterface = () => {
     const status = statusData['student-1']?.[taskId]?.status;
     switch (status) {
       case 'completed':
-        return <CheckCircle className="w-5 h-5 text-green-600" />;
+        return <CheckCircle className="w-5 h-5 text-amber-600" />;
       case 'in-progress':
         return <Clock className="w-5 h-5 text-yellow-600" />;
       default:
@@ -171,7 +171,7 @@ const StudentInterface = () => {
                         <h3 className="text-sm font-medium text-gray-900">{task.title}</h3>
                         <p className="text-sm text-gray-600 mt-1">{task.description}</p>
                         <span className={`inline-block mt-2 px-2 py-1 text-xs font-medium rounded-full ${
-                          task.difficulty === 'Easy' ? 'bg-green-100 text-green-800' :
+                          task.difficulty === 'Easy' ? 'bg-amber-100 text-amber-800' :
                           task.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-800' :
                           'bg-red-100 text-red-800'
                         }`}>
@@ -199,7 +199,7 @@ const StudentInterface = () => {
                       <p className="text-sm text-gray-600">{selectedTask.description}</p>
                     </div>
                     <span className={`px-3 py-1 text-sm font-medium rounded-full ${
-                      selectedTask.difficulty === 'Easy' ? 'bg-green-100 text-green-800' :
+                      selectedTask.difficulty === 'Easy' ? 'bg-amber-100 text-amber-800' :
                       selectedTask.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-800' :
                       'bg-red-100 text-red-800'
                     }`}>
