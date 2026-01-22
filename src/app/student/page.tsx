@@ -287,6 +287,28 @@ function StudentDashboard() {
     });
   };
 
+  const handleTaskStart = async (taskId: string) => {
+    // Auto-update status to "in_progress" when student starts a task
+    if (!student) return;
+    const currentProgress = progress[keyFor(student.id, taskId)];
+    if (currentProgress?.status !== "in_progress") {
+      console.log(`Starting task ${taskId}, changing status from ${currentProgress?.status} to in_progress`);
+      await updateProgress(taskId, "in_progress");
+    }
+  };
+
+  const handleCodeChange = async (taskId: string, codeValue: string) => {
+    // Auto-update to "in_progress" when student starts typing
+    if (!student) return;
+    if (codeValue.trim()) {
+      const currentProgress = progress[keyFor(student.id, taskId)];
+      if (currentProgress?.status === "not_started") {
+        console.log(`Code changed for task ${taskId}, changing status from ${currentProgress?.status} to in_progress`);
+        await updateProgress(taskId, "in_progress");
+      }
+    }
+  };
+
   const runTests = async (taskId: string, task: Task) => {
     if (!task.language || !task.testCases || task.testCases.length === 0) {
       setError("No test cases available for this task.");
@@ -545,6 +567,7 @@ function StudentDashboard() {
                 <div
                   key={task.id}
                   className={`rounded-3xl border transition-all ${meta.border} ${meta.bg}`}
+                  onClick={() => handleTaskStart(task.id)}
                 >
                   <div className="p-6">
                     <div className="mb-4 flex items-start justify-between gap-4">
@@ -597,7 +620,10 @@ function StudentDashboard() {
                           </div>
                           <textarea
                             value={code[task.id] || ""}
-                            onChange={(e) => setCode((prev) => ({ ...prev, [task.id]: e.target.value }))}
+                            onChange={(e) => {
+                              setCode((prev) => ({ ...prev, [task.id]: e.target.value }));
+                              handleCodeChange(task.id, e.target.value);
+                            }}
                             placeholder={`Write your ${task.language} code here...`}
                             className="w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 font-mono text-sm text-white outline-none ring-emerald-400/40 focus:ring-2 resize-none"
                             rows={8}
