@@ -1,10 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #282c34;
+  --background: #000000;
   --foreground: #ffffff;
   --muted: #6b7280;
-  --accent: #61dafb;
+  --accent: #d97706;
+  --maroon-50: #fff7ed;
+  --maroon-100: #ffedd5;
+  --maroon-200: #fed7aa;
+  --maroon-300: #fdba74;
+  --maroon-400: #f59e0b;
+  --maroon-500: #f59e0b;
+  --maroon-600: #d97706;
+  --maroon-700: #b45309;
+  --maroon-800: #92400e;
+  --maroon-900: #78350f;
+  --maroon-950: #451a03;
 }
 
 @theme inline {
@@ -47,7 +58,7 @@ code {
 }
 
 .App-header {
-  background-color: var(--background);
+  background-color: var(--maroon-700);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -71,7 +82,7 @@ code {
 }
 
 ::selection {
-  background: rgba(97, 218, 251, 0.25);
+  background: rgba(128, 0, 32, 0.25);
   color: var(--foreground);
 }
 
@@ -84,4 +95,28 @@ code {
 .card-glow {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35),
     0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/* Maroon theme utilities */
+.bg-maroon-gradient {
+  background: linear-gradient(135deg, var(--maroon-700) 0%, var(--maroon-900) 100%);
+}
+
+.text-maroon-gradient {
+  background: linear-gradient(135deg, var(--maroon-400) 0%, var(--foreground) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.border-maroon {
+  border-color: var(--maroon-600);
+}
+
+.bg-maroon-dark {
+  background-color: var(--maroon-800);
+}
+
+.text-maroon-accent {
+  color: var(--maroon-400);
 }

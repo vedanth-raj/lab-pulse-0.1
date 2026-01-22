@@ -74,7 +74,7 @@ export default function LoginPage() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.12),_transparent_35%),radial-gradient(circle_at_30%_10%,_rgba(34,197,94,0.12),_transparent_25%),radial-gradient(circle_at_70%_20%,_rgba(244,114,182,0.12),_transparent_25%)]" />
       
       <main className="relative mx-auto flex min-h-screen max-w-md flex-col justify-center px-6 py-12">
-        <div className="w-full space-y-8 rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 via-white/5 to-white/5 p-8 shadow-2xl shadow-emerald-500/10 backdrop-blur">
+        <div className="w-full space-y-8 rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 via-white/5 to-white/5 p-8 shadow-2xl shadow-amber-500/10 backdrop-blur">
           <div className="space-y-2 text-center">
             <h1 className="text-3xl font-bold text-white">Lab Pulse</h1>
             <p className="text-slate-300/80">Sign in to your account</p>
@@ -92,8 +92,8 @@ export default function LoginPage() {
                     onClick={() => setRole("faculty")}
                     className={`flex items-center justify-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition ${
                       role === "faculty"
-                        ? "border-emerald-500 bg-emerald-500/20 text-emerald-200"
-                        : "border-white/20 bg-white/5 text-slate-300 hover:border-emerald-500/50"
+                        ? "border-amber-500 bg-amber-500/20 text-amber-200"
+                        : "border-white/20 bg-white/5 text-slate-300 hover:border-amber-500/50"
                     }`}
                   >
                     <GraduationCap className="h-4 w-4" />
@@ -104,8 +104,8 @@ export default function LoginPage() {
                     onClick={() => setRole("student")}
                     className={`flex items-center justify-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition ${
                       role === "student"
-                        ? "border-emerald-500 bg-emerald-500/20 text-emerald-200"
-                        : "border-white/20 bg-white/5 text-slate-300 hover:border-emerald-500/50"
+                        ? "border-amber-500 bg-amber-500/20 text-amber-200"
+                        : "border-white/20 bg-white/5 text-slate-300 hover:border-amber-500/50"
                     }`}
                   >
                     <Users className="h-4 w-4" />
@@ -125,7 +125,7 @@ export default function LoginPage() {
                     type="text"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
-                    className="w-full rounded-lg border border-white/20 bg-white/5 pl-10 pr-4 py-2 text-white placeholder-slate-400 backdrop-blur transition focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                    className="w-full rounded-lg border border-white/20 bg-white/5 pl-10 pr-4 py-2 text-white placeholder-slate-400 backdrop-blur transition focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/20"
                     placeholder="Enter your username"
                     required
                   />
@@ -143,7 +143,7 @@ export default function LoginPage() {
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full rounded-lg border border-white/20 bg-white/5 pl-10 pr-4 py-2 text-white placeholder-slate-400 backdrop-blur transition focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                    className="w-full rounded-lg border border-white/20 bg-white/5 pl-10 pr-4 py-2 text-white placeholder-slate-400 backdrop-blur transition focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/20"
                     placeholder="Enter your password"
                     required
                   />
@@ -160,7 +160,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/20 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full rounded-lg bg-amber-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-amber-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? "Signing in..." : "Sign in"}
             </button>

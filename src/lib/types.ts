@@ -26,10 +26,10 @@ export const STATUS_META: Record<
   },
   done: {
     label: "Complete",
-    dot: "bg-emerald-400",
-    bg: "bg-emerald-500/10",
-    border: "border border-emerald-500/30",
-    text: "text-emerald-200",
+    dot: "bg-amber-400",
+    bg: "bg-amber-500/10",
+    border: "border border-amber-500/30",
+    text: "text-amber-200",
   },
 };
 
